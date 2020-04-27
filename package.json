@@ -5,27 +5,37 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "firebase": "^7.14.2",
+    "formik": "^2.1.4",
     "gatsby": "^2.20.36",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-offline": "^3.1.5",
+    "gatsby-plugin-postcss": "^2.3.0",
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-sharp": "^2.5.7",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.2.5",
     "gatsby-transformer-sharp": "^2.4.7",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "yup": "^0.28.4"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "prettier": "2.0.5",
+    "tailwindcss": "^1.3.5"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
+    "dev": "gatsby develop",
+    "dpl": "gatsby clean && gatsby build && firebase deploy",
+    "prod": "gatsby build && gatsby serve",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
